@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">  
+ 
+<hibernate-mapping>
+    <class name="com.javatpoint.hibernate.Employee" table="emp1000">
+        <id name="id" type = "int" column="id">
+        </id>
+        
+        <property name="firstName"></property>
+        <property name="lastName"></property>
+    </class>
+</hibernate-mapping>
+
+<arg>
+    
+</arg>

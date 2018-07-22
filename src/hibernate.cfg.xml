@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE hibernate-configuration PUBLIC 
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+        "http://www.hibernate.org/dtd/hibernate-configuration"> 
+<hibernate-configuration>
+    <session-factory>
+        <property name= "hibernate.dialect">
+            org.hibernate.dialect.MySQL5Dialect
+            <!--//org.hibernate.dialect.MySQLDialect does not work for mysql 4+ -->
+        </property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.jdbc.Driver  
+        </property>
+        
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost/hello
+        </property>
+        <property name="hibernate.connection.username">
+            root
+        </property>
+        <property name="hibernate.connection.password">
+            110%real
+        </property>
+        <property name="hibernate.hbm2ddl.auto">update
+        </property>
+        
+        <!-- list of mapping files -->
+         <mapping resource="employee.hbm.xml"/>
+        <!--
+        <mapping class="com.javatpoint.hibernate.Employee"/>
+        did not work as cfg.xml file is used
+        use of this can be prevented by using annotations on Employee class 
+         -->
+    </session-factory>
+    
+    
+        
+</hibernate-configuration>
